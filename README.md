@@ -8,11 +8,11 @@ In this example, Users sets up an EC2 with CDK that prepares to install and run 
 1.2. HTTP Outbound rules that allows Streamlit to host
 1.3. Creates HTTP with port required for the Streamlit
 1.4. Contains the `User Data` that installs the latest updates
-1.5. `User Data` also copies a sample streamlit app in the path /home/ec2-user/streamlit-app. The file app.py contains the sample streamlit app that users can modify to suite her purpose  
+1.5. `User Data` also copies a sample streamlit app in the path /home/ec2-user/streamlit-app. The file app.py contains the sample streamlit app that users can modify to suite her purpose. It also copies the requirement.txt file that is used in the step 2 below
 
 **2. As a one time activity, User then installs Streamlit manually accessing the EC2. Here are the manual steps listed**
 2.1. Access the EC2 with Online Navigate on AWS Console>EC2>Instances>Select `/home/ec2-user/streamlit-app`. Then click Connect for online access of the EC2
-2.2. Install the streamlit type `pip3 install streamlit`
+2.2. Install the streamlit and any other depdencies with the requirement files available `pip3 install -r /home/ec2-user/streamlit-app/requirements.txt`
 
 **3. Launch the Streamlit App for Temporary Testing**
 3.1. Launch the streamlit app.py by typing following command `streamlit run /home/ec2-user/streamlit-app/app.py`
@@ -23,7 +23,6 @@ In this example, Users sets up an EC2 with CDK that prepares to install and run 
 4.2. Copy paste the External URL generated in Web Browser to access the Streamlit App
 
 **5. For any enhancemnet in the streamlit app, the users can modify the the files app.py `home/ec2-user/streamlit-app/app.py`**
-
 
 
 # Welcome to your CDK Python project!
