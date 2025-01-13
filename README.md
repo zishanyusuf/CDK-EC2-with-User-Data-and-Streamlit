@@ -12,14 +12,27 @@ In this example, Users sets up an EC2 with CDK that prepares to install and run 
 
 **2. As a one time activity, User then installs Streamlit manually accessing the EC2. Here are the manual steps listed**
 2.1. Access the EC2 with Online Navigate on AWS Console>EC2>Instances>Select `/home/ec2-user/streamlit-app`. Then click Connect for online access of the EC2
-2.2. Install the streamlit and any other depdencies with the requirement files available `pip3 install -r /home/ec2-user/streamlit-app/requirements.txt`
+2.2. Install the streamlit and any other depdencies with the requirement files available. Run following on EC2 terminal
+
+```bash
+pip3 install -r /home/ec2-user/streamlit-app/requirements.txt
+```
 
 **3. Launch the Streamlit App for Temporary Testing**
-3.1. Launch the streamlit app.py by typing following command `streamlit run /home/ec2-user/streamlit-app/app.py`
-3.2. Copy paste the External URL generated in Web Browser to access the Streamlit App 
+3.1. Launch the streamlit app.py by typing following command 
+
+```bash
+streamlit run /home/ec2-user/streamlit-app/app.py
+```
+3.2. Copy the **External URL** generated in EC2 terminal. Paste it into the Web Browser to access the Streamlit App 
 
 **4. Launch the Streamlit App for Permanent**
-4.1. Launch the streamlit app.py by typing following command `nohup python3 -m streamlit run /home/ec2-user/streamlit-app/app.py`
+4.1. Launch the streamlit app.py by typing following command 
+
+```bash
+nohup python3 -m streamlit run /home/ec2-user/streamlit-app/app.py`
+```
+
 4.2. Copy paste the External URL generated in Web Browser to access the Streamlit App
 
 **5. For any enhancemnet in the streamlit app, the users can modify the the files app.py `home/ec2-user/streamlit-app/app.py`**
