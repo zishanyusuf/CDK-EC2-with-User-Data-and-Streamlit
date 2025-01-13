@@ -35,7 +35,8 @@ nohup python3 -m streamlit run /home/ec2-user/streamlit-app/app.py`
 
 4.2. Copy paste the External URL generated in Web Browser to access the Streamlit App
 
-**5. For any enhancemnet in the streamlit app, the users can modify the the files app.py `home/ec2-user/streamlit-app/app.py`**
+**5. For any enhancemnet in the streamlit app**
+The users can modify the the files app.py avialbe in this path in EC2 `home/ec2-user/streamlit-app/app.py`
 
 
 # Welcome to your CDK Python project!
