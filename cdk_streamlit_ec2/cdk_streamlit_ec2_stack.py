@@ -70,7 +70,9 @@ class CdkStreamlitEc2Stack(Stack):
             self,
             "StreamlitInstance",
             instance_type=ec2.InstanceType("t2.small"),
-            machine_image=ec2.MachineImage.latest_amazon_linux2023(),
+            machine_image=ec2.MachineImage.latest_amazon_linux(
+                generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
+            ),
             vpc=vpc,
             security_group=sec_group,
             associate_public_ip_address=True,

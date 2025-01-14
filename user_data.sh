@@ -1,9 +1,9 @@
-#!/bin/bash
-sudo dnf update
-sudo dnf upgrade -y
-sudo dnf install python3-pip -y
+#! /bin/bash -x
+sudo yum update
+sudo yum upgrade -y
+sudo yum install python3-pip -y
 #Install the Git packages
-sudo dnf install git -y
+sudo yum install git -y
 #Clone the Git page containing the streamlit app
 sudo mkdir -p /home/ec2-user/streamlit-app
 cd /home/ec2-user/streamlit-app
